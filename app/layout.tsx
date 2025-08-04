@@ -16,11 +16,12 @@ export const metadata: Metadata = {
       url: "https://store-silk-three.vercel.app/",
       siteName: "مستشفى المجد",
       images:[{
-        url:"https://store-silk-three.vercel.app/opengraph-image.jpg",
+        url:"https://images.pexels.com/photos/769749/pexels-photo-769749.jpeg?auto=compress&cs=tinysrgb&w=500",
         width: 1200,
           height: 630,}
       ]
     }
+  
 };
 
 export default function RootLayout({
