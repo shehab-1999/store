@@ -1,6 +1,6 @@
-"use client";
 
-import { useState } from "react";
+
+
 import {
   ShoppingBag,
   Heart,
@@ -29,6 +29,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 
 import dynamic from "next/dynamic";
+import { Metadata } from "next";
 
 // بيانات المنتجات الوهمية
 const products = [
@@ -267,24 +268,45 @@ const ProductCard = dynamic(() => import('@/components/ProductCard'), {
 const Header = dynamic(() => import('@/components/Header'), { ssr: false });
 const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
 const Hero = dynamic(() => import('@/components/Hero'));
+export async function generateMetadata():Promise<Metadata | undefined>{
+
+   
+  return {
+   
+ 
+  
+   openGraph: {
+    title: 'متجر الأناقة - أحدث صيحات الموضة',
+  description: 'اكتشف مجموعة حصرية من الملابس العصرية للرجال والنساء مع أفضل الأحذية والحقائب',
+      type: "website",
+     
+      url: "https://store-silk-three.vercel.app/",
+      siteName: "مستشفى المجد",
+      images:[{
+        url:"https://store-silk-three.vercel.app/opengraph-image.jpg",
+        width: 1200,
+          height: 630,}
+      ]
+    }
+   
+  };
+}
 export default function Home() {
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [searchTerm, setSearchTerm] = useState("");
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   // const [selectedProduct, setSelectedProduct] = useState(null);
   // const [selectedSize, setSelectedSize] = useState("");
   // const [selectedColor, setSelectedColor] = useState("");
   // const [quantity, setQuantity] = useState(1);
 
 
-  const filteredProducts = products.filter((product) => {
-    const matchesCategory =
-      selectedCategory === "all" || product.category === selectedCategory;
-    const matchesSearch = product.name
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  // const filteredProducts = products.filter((product) => {
+  //   const matchesCategory =
+  //     selectedCategory === "all" || product.category === selectedCategory;
+  //   const matchesSearch = product.name
+  //     .toLowerCase()
+  //     .includes(searchTerm.toLowerCase());
+  //   return matchesCategory && matchesSearch;
+  // });
 
   // const openProductModal = (product) => {
   //   setSelectedProduct(product);
@@ -614,12 +636,12 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
       {/* Header */}
-      <Header
+      {/* <Header
         searchTerm={searchTerm}
         mobileMenuOpen={mobileMenuOpen}
         setMobileMenuOpen={setMobileMenuOpen}
         setSearchTerm={setSearchTerm}
-      />
+      /> */}
 
       <Hero />
 
@@ -633,7 +655,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="flex flex-wrap gap-4">
+          {/* <div className="flex flex-wrap gap-4">
             {categories.map((category) => (
               <Button
                 key={category.id}
@@ -656,11 +678,11 @@ export default function Home() {
                 </Badge>
               </Button>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Products Grid */}
-        <div className="mb-8">
+        {/* <div className="mb-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
             {categories.find((cat) => cat.id === selectedCategory)?.name ||
               "جميع المنتجات"}
@@ -668,9 +690,9 @@ export default function Home() {
           <p className="text-gray-600 dark:text-gray-400 mb-8">
             {filteredProducts.length} منتج متاح
           </p>
-        </div>
+        </div> */}
 
-        {filteredProducts.length === 0 ? (
+        {/* {filteredProducts.length === 0 ? (
           <div className="text-center py-16">
             <div className="bg-gray-100 dark:bg-gray-700 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4">
               <Search className="w-12 h-12 text-gray-400 dark:text-gray-500" />
@@ -688,7 +710,7 @@ export default function Home() {
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-        )}
+        )} */}
       </div>
 
       {/* Footer */}
