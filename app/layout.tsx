@@ -8,6 +8,19 @@ import { ThemeProvider } from '@/components/theme-provider';
 export const metadata: Metadata = {
   title: 'متجر الأناقة - أحدث صيحات الموضة',
   description: 'اكتشف مجموعة حصرية من الملابس العصرية للرجال والنساء مع أفضل الأحذية والحقائب',
+   openGraph: {
+    title: 'متجر الأناقة - أحدث صيحات الموضة',
+  description: 'اكتشف مجموعة حصرية من الملابس العصرية للرجال والنساء مع أفضل الأحذية والحقائب',
+      type: "website",
+     
+      url: "http://https://store-silk-three.vercel.app/opengraph-image.jpg",
+      siteName: "مستشفى المجد",
+      images:[{
+        url:"http://https://store-silk-three.vercel.app/opengraph-image.jpg",
+        width: 1200,
+          height: 630,}
+      ]
+    }
 };
 
 export default function RootLayout({
