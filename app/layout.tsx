@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   description: 'اكتشف مجموعة حصرية من الملابس العصرية للرجال والنساء مع أفضل الأحذية والحقائب',
       type: "website",
      
-      url: "http://https://store-silk-three.vercel.app/opengraph-image.jpg",
+      url: "https://store-silk-three.vercel.app/opengraph-image.jpg",
       siteName: "مستشفى المجد",
       images:[{
-        url:"http://https://store-silk-three.vercel.app/opengraph-image.jpg",
+        url:"https://store-silk-three.vercel.app/opengraph-image.jpg",
         width: 1200,
           height: 630,}
       ]
