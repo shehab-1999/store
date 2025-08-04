@@ -10,8 +10,7 @@ export async function generateMetadata():Promise<Metadata | undefined>{
    
   return {
    
-  title: 'متجر الأناقة - أحدث صيحات الموضة',
-  description: 'اكتشف مجموعة حصرية من الملابس العصرية للرجال والنساء مع أفضل الأحذية والحقائب',
+ 
   
    openGraph: {
     title: 'متجر الأناقة - أحدث صيحات الموضة',
