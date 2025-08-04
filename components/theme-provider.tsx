@@ -1,16 +1,17 @@
 'use client';
 
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
-import { type ThemeProviderProps } from 'next-themes/dist/types';
+import type { ThemeProviderProps } from 'next-themes';
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   return (
     <NextThemesProvider 
       attribute="class"
       defaultTheme="light"
-      enableSystem={false} // الأهم: تعطيل النظام التلقائي
+      enableSystem={false}
       disableTransitionOnChange
-      storageKey="theme" // إضافة مفتاح التخزين
+      storageKey="theme"
+      {...props}  // Important: Spread remaining props
     >
       {children}
     </NextThemesProvider>
