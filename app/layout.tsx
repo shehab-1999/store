@@ -6,8 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 
 
 export const metadata: Metadata = {
-  title: 'متجر الأناقة - أحدث صيحات الموضة',
-  description: 'اكتشف مجموعة حصرية من الملابس العصرية للرجال والنساء مع أفضل الأحذية والحقائب',
+
    openGraph: {
     title: 'متجر الأناقة - أحدث صيحات الموضة',
   description: 'اكتشف مجموعة حصرية من الملابس العصرية للرجال والنساء مع أفضل الأحذية والحقائب',
